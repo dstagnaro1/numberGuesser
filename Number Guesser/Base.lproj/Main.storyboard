@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Number_Guesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbl-Q9-ipf" userLabel="numberPicker">
+                                <rect key="frame" x="0.0" y="348" width="600" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="WXR-80-c4z"/>
+                                    <constraint firstAttribute="height" constant="180" id="npm-ql-xaq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="npm-ql-xaq"/>
+                                    </mask>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-n2-wxk" userLabel="guessButton">
+                                <rect key="frame" x="237" y="291" width="126" height="65"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="QfQ-Ts-n6e"/>
+                                    <constraint firstAttribute="height" constant="65" id="mpX-8U-PU2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <state key="normal" title="Guess!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guessButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rF7-Or-PKk"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6N8-tL-8CB" userLabel="labelStack">
+                                <rect key="frame" x="0.0" y="35" width="600" height="147"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go ahead a make a guess!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="YNj-Fa-lKW" userLabel="topLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh darn thats too low!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="oDf-Wf-pvd" userLabel="middleLabel">
+                                        <rect key="frame" x="0.0" y="59" width="600" height="29"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range hint = " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="oXk-AK-gnw" userLabel="rangeHintLabel">
+                                        <rect key="frame" x="0.0" y="118" width="600" height="29"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8L-bL-sGJ">
+                                <rect key="frame" x="252" y="526" width="97" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="G2v-dC-3yl"/>
+                                    <constraint firstAttribute="height" constant="54" id="IYi-pI-MQC"/>
+                                    <constraint firstAttribute="height" constant="28" id="bav-xo-WPc"/>
+                                    <constraint firstAttribute="width" constant="55" id="wew-Jo-OvE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="31"/>
+                                <state key="normal" title="Reset"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bav-xo-WPc"/>
+                                        <exclude reference="wew-Jo-OvE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dbo-OO-yre"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pbl-Q9-ipf" secondAttribute="trailing" id="2f4-xV-nZn"/>
+                            <constraint firstItem="kLO-n2-wxk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3HY-kj-2nr"/>
+                            <constraint firstItem="6N8-tL-8CB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bfa-K9-6XP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pbl-Q9-ipf" secondAttribute="bottom" constant="50" id="MN5-zD-JBT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a8L-bL-sGJ" secondAttribute="bottom" constant="20" id="TrL-4S-VGf"/>
+                            <constraint firstItem="a8L-bL-sGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZL5-pm-h3Q"/>
+                            <constraint firstItem="pbl-Q9-ipf" firstAttribute="top" secondItem="kLO-n2-wxk" secondAttribute="bottom" constant="-8" id="Znx-5l-CaX"/>
+                            <constraint firstItem="pbl-Q9-ipf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b8V-7C-dWu"/>
+                            <constraint firstItem="kLO-n2-wxk" firstAttribute="top" secondItem="pbl-Q9-ipf" secondAttribute="bottom" constant="8" id="jFS-Xa-l1m"/>
+                            <constraint firstItem="6N8-tL-8CB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lS3-Zj-ELu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a8L-bL-sGJ" secondAttribute="bottom" constant="20" id="rx4-cR-XhE"/>
+                            <constraint firstItem="6N8-tL-8CB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="s45-qs-7h7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kLO-n2-wxk" secondAttribute="bottom" constant="20" id="t7s-qk-y6s"/>
+                            <constraint firstItem="a8L-bL-sGJ" firstAttribute="top" secondItem="pbl-Q9-ipf" secondAttribute="bottom" constant="8" id="uJC-hY-keT"/>
+                            <constraint firstAttribute="trailing" secondItem="6N8-tL-8CB" secondAttribute="trailing" id="ul3-J1-ZOE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pbl-Q9-ipf" secondAttribute="bottom" constant="56" id="xgb-WU-7Kn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jFS-Xa-l1m"/>
+                                <exclude reference="uJC-hY-keT"/>
+                                <exclude reference="MN5-zD-JBT"/>
+                                <exclude reference="TrL-4S-VGf"/>
+                                <exclude reference="t7s-qk-y6s"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="guessButton" destination="kLO-n2-wxk" id="RHN-Eg-wUn"/>
+                        <outlet property="middleLabel" destination="oDf-Wf-pvd" id="eFQ-wB-P1p"/>
+                        <outlet property="numberPicker" destination="pbl-Q9-ipf" id="bLs-g1-N9f"/>
+                        <outlet property="rangeHintLabel" destination="oXk-AK-gnw" id="bJJ-q0-b9R"/>
+                        <outlet property="resetButton" destination="a8L-bL-sGJ" id="FxQ-mC-SSM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="360"/>
+        </scene>
+    </scenes>
+</document>
